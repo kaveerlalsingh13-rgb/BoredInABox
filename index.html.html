@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bored-Boxes" />
+    <title>BoredInABox.com</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Styles-->
+    <style>
+      #body {
+        background-color: rgb(50, 50, 50);
+      }
+      #boxImg {
+        width: 200px;
+        height: auto;
+        box-shadow: 0 0 10px red; /*Red txt glow*/
+      }
+      #img {
+        justify-content: center; /* centers horizontally */
+        align-items: center;
+        display: flex;
+      }
+      #heading {
+        text-align: center;
+        color: red;
+        font-size: 20px;
+        text-shadow: 0 0 30px red; /*Red txt glow*/
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        margin-bottom: 0px;
+      }
+      #slogan {
+        position: relative;
+        text-align: center;
+        color: red;
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        margin-top: 0px;
+        background-color: rgba(0, 0, 0, 0.325);
+        border-radius: 3rem;
+        padding: 0px;
+        text-shadow: 0 0 30px red;
+      }
+      #slogan:hover {
+        position: relative;
+        text-align: center;
+        color: rgb(85, 85, 85);
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        margin-top: 0px;
+        background-color: rgb(50, 50, 50);
+        border-radius: 3rem;
+        padding: 0px;
+        text-shadow: 0 0 30px rgb(255, 0, 0);
+        cursor: pointer;
+      }
+      @keyframes flicker {
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+          opacity: 1;
+        }
+        20%,
+        22%,
+        24%,
+        55% {
+          opacity: 0;
+        }
+      }
+      #slogan {
+        animation: flicker 3s infinite ease-out;
+      }
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-150%);
+          opacity: 0;
+        }
+        80% {
+          transform: translateY(20px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      #heading h1 {
+        animation: slideDown 2s ease-out forwards;
+      }
+      @keyframes glowPulse {
+        0% {
+          text-shadow:
+            0 0 20px red,
+            0 0 40px rgb(255, 0, 89);
+        }
+        50% {
+          text-shadow:
+            0 0 40px red,
+            0 0 80px rgb(255, 0, 89);
+        }
+        100% {
+          text-shadow:
+            0 0 20px red,
+            0 0 40px rgb(255, 0, 89);
+        }
+      }
+      #heading h1 {
+        animation:
+          slideDown 2s ease-out forwards,
+          glowPulse 4s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <section class="sections" id="info">
+      <div class="divs" id="heading">
+        <h1>Welcome To BoredInABox</h1>
+      </div>
+      <div class="divs" id="slogan">
+        <p>Where boredom gets boxed in style</p>
+      </div>
+      <div class="divs" id="img">
+        <img id="boxImg" src="onePieceBox.jpg" />
+      </div>
+    </section>
+    <section class="sections" id="shapes">
+      <div class="divs" id="hexagon"></div>
+    </section>
+  </body>
+</html>
